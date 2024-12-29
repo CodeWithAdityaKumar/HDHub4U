@@ -3,12 +3,12 @@ import * as cheerio from "cheerio";
 
 export async function GET(req) {
   try {
-    const { data } = await axios.get(
-      "https://hdhub4u.tw/what-if-season-3-webrip-english-full-series/"
-    );
     // const { data } = await axios.get(
-    //   "http://localhost:3000/htmlFile/downloadPage.html"
+    //   "https://hdhub4u.tw/what-if-season-3-webrip-english-full-series/"
     // );
+    const { data } = await axios.get(
+      "https://hdhub4u.vercel.app/htmlFile/downloadPage.html"
+    );
 
     const $ = cheerio.load(data);
 
